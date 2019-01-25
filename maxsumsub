@@ -1,0 +1,26 @@
+def maxset(a):
+    li = []
+    inn = []
+    for i in range(len(a)):
+        if a[i] >= 0:
+            inn.append(a[i])
+        else:
+            li.append(inn)
+            inn = []
+    li.append(inn)
+    max_sum = -1
+    l = []
+    for i in li:
+        su = sum(i)
+        if su > max_sum:
+            max_sum = su
+            l = i
+        elif su == max_sum:
+            if len(l) < len(i):
+                l = i
+            if len(l) == len(i):
+                if (a.index(l[0]), len(l))[0] > (a.index(i[0]), len(i))[0]:
+                    l = i
+    print(l)
+
+maxset([1,2,5,-7,2,5])

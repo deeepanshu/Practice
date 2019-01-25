@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+def decorator_fun(original_fun):
+    def wrapper_fun(*args,**kwargs):
+        print('Wrapper executed this before {}'.format(original_fun.__name__))
+        return original_fun(*args, **kwargs)
+    return wrapper_fun
+
+@decorator_fun
+def display():
+    print("Display Function Running")
+
+@decorator_fun
+def display_info(name, age):
+    print('Display with args: {0},{1}'.format(name, age))
+
+display()
+display_info('John', 25)

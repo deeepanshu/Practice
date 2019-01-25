@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+l = [1,2,3,4]
+m = [str(x) for x in l]
+s = "".join(m)
+s = int(s)
+s = str(s+1)
+l = list(str(s))
+print(l)
+
+'''
+public class Solution {
+    public ArrayList<Integer> plusOne(ArrayList<Integer> A) {
+        int car=1;
+        int i=A.size()-1;
+        ArrayList<Integer> ans=new ArrayList<>();
+        while(i>=0){
+            int sum=A.get(i)+car;
+            car=sum/10;
+            ans.add(0,sum%10);
+            i--;
+        }
+        if(car!=0){
+            ans.add(0,car);
+        }
+        i=0;
+        while(ans.size()>0&&ans.get(0)==0){
+            ans.remove(0);
+        }
+        
+        return ans;
+    }
+}
+'''
