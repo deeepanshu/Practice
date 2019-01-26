@@ -1,18 +1,38 @@
-#!/usr/bin/python3
+class Solution:
+    # @param A : integer
+    # @return a list of list of integers
+    def generateMatrix(self, A):
+        n = A
+        top = left = 0
+        bottom = right = (n -1)
+        x = 1
+        way = 0
+        series = []
+        while top <= bottom and left <= right and x <= n**2:
+            if way == 0:
+                if len(series) == 0:
+                    series.append([])
+                for i in range(left, right + 1):
+                    series[top].append(x)
+                    x+=1
+                top += 1
+            elif way == 1:
+                for i in range(top, bottom + 1):
+                    if len(series) < i + 1:
+                        series.append([])
+                    series[i].insert(right, x)
+                    x+=1
+                right -= 1
+            elif way == 2:
+                for i in range(right, left -1, -1):
+                    series[bottom].insert(0,x)
+                    x += 1
+                bottom -= 1
+            elif way == 3:
+                for i in range(bottom, top -1, -1):
+                    series[i].insert(left, x)
+                    x+=1
+                left+=1
+            way = (way + 1) % 4
 
-n = int(input())
-n = n**2
-
-top = left = 0
-bottom = right = (n -1)
-x = 1
-way = 0
-series = []
-while top <= bottom and left <= right and x <= n**2:
-    l = []
-    if way == 0:
-        l = series[top]
-        for i in range(left, right + 1):
-            l.append(x)
-            x+1
-    way = (way + 1) % 4
+        return series
