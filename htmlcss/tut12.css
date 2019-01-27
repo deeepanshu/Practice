@@ -2,6 +2,7 @@ body {
     color: green;
     font-family: Verdana, Arial, Geneva, Arial Black;
     font-weight: bolder;
+    background-color: #ffcf79;
 }
 
 h1,h2 {
@@ -12,10 +13,20 @@ h1,h2 {
     color: blue;
     font-size: 25px;
 }
-p.purple {
+p.para1 {
     color: purple;
     font-size: 25px;
 }
+p.para2 {
+    color: purple;
+    font-size: 25px;
+}
+p.slanted {
+    color: purple;
+    font-size: 25px;
+    font-style: italic;
+}
+
 
 .underline{
     text-decoration: underline;
