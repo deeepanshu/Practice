@@ -2,9 +2,15 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Mingrids",
+            "name": "CodeLens (Launch) - SimplifyDirectory",
             "request": "launch",
-            "mainClass": "Mingrids"
+            "mainClass": "SimplifyDirectory"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch)",
+            "request": "launch",
+            "mainClass": "RedundantBrace"
         }
     ]
 }
