@@ -1,16 +1,26 @@
 {
+        
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - SimplifyDirectory",
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
             "request": "launch",
-            "mainClass": "SimplifyDirectory"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch)",
-            "request": "launch",
-            "mainClass": "RedundantBrace"
+            "program": "/home/de.jain1/Desktop/Sandbox/competitive/pointertrial.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "/home/de.jain1/Desktop/Sandbox/competitive/",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         }
+    ]
+        
     ]
 }
